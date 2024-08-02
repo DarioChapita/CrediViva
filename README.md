@@ -38,22 +38,63 @@ Several security measures have been implemented:
 
 The backend is built using Node.js and Express, and provides the following RESTful endpoints:
 
-### Products
-- `GET /products`: Retrieve the list of products.
-- `POST /products`: Create a new product.
-- `PUT /products/:id`: Update an existing product.
-- `DELETE /products/:id`: Delete a product.
+## API Endpoints
 
-### Cart
-- `GET /carts/:id`: Retrieve the contents of a cart.
-- `POST /carts`: Create a new cart.
-- `PUT /carts/:id`: Update the status of a cart.
-- `DELETE /carts/:id`: Delete a cart.
+### Cart Endpoints
 
-### Products in Cart
-- `POST /product_carts`: Add a product to the cart.
-- `PUT /product_carts/:id`: Modify the quantity of a product in the cart.
-- `DELETE /product_carts/:id`: Remove a product from the cart.
+- **`GET /`**: Retrieve the current cart
+  - **Method**: `GET`
+  - **Authentication**: Required
+  - **Description**: Fetches the contents of the user's cart.
+
+- **`POST /add`**: Add a product to the cart
+  - **Method**: `POST`
+  - **Authentication**: Required
+  - **Request Body**: Product details and quantity
+  - **Description**: Adds a specified product to the cart.
+
+- **`PUT /update`**: Update the quantity of a product in the cart
+  - **Method**: `PUT`
+  - **Authentication**: Required
+  - **Request Body**: Product ID and new quantity
+  - **Description**: Updates the quantity of a product in the cart.
+
+- **`POST /checkout`**: Create an order with the products in the cart
+  - **Method**: `POST`
+  - **Authentication**: Required
+  - **Request Body**: Order details
+  - **Description**: Finalizes the cart contents into an order.
+
+### User Authentication Endpoints
+
+- **`POST /register`**: Register a new user
+  - **Method**: `POST`
+  - **Description**: Registers a new user in the system.
+
+- **`POST /login`**: Authenticate a user and issue a token
+  - **Method**: `POST`
+  - **Description**: Authenticates a user and returns a JWT token.
+
+### Product Endpoints
+
+- **`GET /`**: Retrieve all products
+  - **Method**: `GET`
+  - **Description**: Fetches a list of all products available.
+
+- **`GET /:id`**: Retrieve a single product by ID
+  - **Method**: `GET`
+  - **Description**: Fetches details of a single product identified by the ID.
+
+- **`POST /`**: Create a new product
+  - **Method**: `POST`
+  - **Request Body**: Product details
+  - **Description**: Adds a new product to the catalog.
+
+- **`PUT /:id`**: Update an existing product by ID
+  - **Method**: `PUT`
+  - **Request Body**: Updated product details
+  - **Description**: Updates details of an existing product identified by the ID.
+
 
 ## State Management
 
