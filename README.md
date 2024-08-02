@@ -38,8 +38,6 @@ Several security measures have been implemented:
 
 The backend is built using Node.js and Express, and provides the following RESTful endpoints:
 
-## API Endpoints
-
 ### Cart Endpoints
 
 - **`GET /`**: Retrieve the current cart
