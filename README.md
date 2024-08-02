@@ -138,7 +138,7 @@ To facilitate the setup and execution of the MongoDB database, Docker was used t
    docker run --name mongodb -d -p 27018:27017 mongo
    ```
 
-   ## How to Run the Project
+## How to Run the Project
 
 ### Prerequisites
 
@@ -149,17 +149,21 @@ To facilitate the setup and execution of the MongoDB database, Docker was used t
 ### Installation
 
 1. Clone the repository:
+   
    ```sh
    git clone <repository-url>
-  ```
+   ```
+   
 2. Navigate to the project directory:
    ```sh
    cd <project-name>
-  ```
+   ```
+   
 3. Install dependencies:
-    ```sh
+   ```sh
    npm install
-  ```
+   ```
+   
 ### Configuration
 
 Create a .env file in the root of the project with the following environment variables:
@@ -171,18 +175,19 @@ JWT_SECRET=<your-jwt-secret>
 
 ### Running
 To run the frontend:
-    ```sh
+
+   ```sh
    npm run dev
-  ```
+   ```
 ### To run the backend:
-```sh
+   ```sh
    npm start
- ```
+   ```
 ### Testing
 To run the tests:
-```sh
-   npm test
- ```
+  ```sh
+  npm test
+  ```
 
 ### Author
 ### Darío
