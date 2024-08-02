@@ -22,7 +22,7 @@ This project is a shopping cart application developed using React, Redux, and Vi
 
 ## Architecture
 
-The project follows the MVC (Model-View-Controller) design pattern for both the frontend and backend. Additionally, the principles of SOLID, DRY, and KISS have been followed to ensure clean and maintainable code.
+The project follows the MVC (Model-View-Controller) design pattern for both the frontend and backend.
 
 ## Security
 
